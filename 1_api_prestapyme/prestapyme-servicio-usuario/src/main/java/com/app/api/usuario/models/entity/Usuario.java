@@ -17,7 +17,8 @@ public class Usuario implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false)
+	
+	@Column(nullable = false, unique = true)
 	private String dni;
 	
 	@Column(nullable = false)
@@ -32,7 +33,7 @@ public class Usuario implements Serializable{
 	@Column(nullable = false)
 	private String direccion;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String login;
 	
 	@Column(nullable = false)
